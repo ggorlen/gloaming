@@ -22,7 +22,7 @@ const Player = function (data) {
   this.ax = 0;
   this.ay = 0;
   this.angle = 0;
-  this.rotationSpeed = data.rotationSpeed || 4;
+  this.rotationSpeed = data.rotationSpeed || 6;
   this.friction = data.friction || 0.85;
 }; // end Player
 
@@ -75,7 +75,7 @@ Player.prototype.update = function (level, gridSize) {
 Player.prototype.collides = function (level, gridSize) {
   const x = this.position[0] / gridSize;
   const y = this.position[1] / gridSize;
-  const step = 0.35; // TODO parametize
+  const step = 0.35; // TODO parametrize
   const n = y - step | 0;
   const s = y + step | 0;
   const e = x + step | 0;

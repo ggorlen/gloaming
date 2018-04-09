@@ -127,13 +127,13 @@ Game.prototype.render = function (ctx) {
     [
       this.player.position[0] + this.width, 
       this.player.position[1] + this.height
-    ],
+    ]
   );
   
   ctx.fillStyle = "#444";
   ctx.moveTo(visibility[0][0] + viewportX,visibility[0][1] + viewportY);	
   
-  for (var i = 1; i < visibility.length; i++){
+  for (let i = 1; i < visibility.length; i++) {
   	ctx.lineTo(visibility[i][0] + viewportX, visibility[i][1] + viewportY);		
   }
   //ctx.moveTo(visibility[0][0] + viewportX,visibility[0][1] + viewportY); // ctx.closePath();
@@ -197,7 +197,7 @@ Game.prototype.update = function () {
 
   my.player.update(my.level, my.gridSize);
   my.render(my.ctx);
-  requestAnimationFrame(e => my.update());
+  requestAnimationFrame(() => my.update());
 }; // end update
 
 /**

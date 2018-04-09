@@ -2,11 +2,12 @@
 An in-progress 2d game sketch using [visibility polygon](https://github.com/byronknoll/visibility-polygon-js)
 
 ## todo
-- rotational velocity
-- generative maps
+- fix slight glitchiness in vision field
+- cull out off-screen blocks in visibility polygon
 - multiple floors
 - health bar
-- 2 player split screen or socket version
+- items
+- 2 player split screen, socket version, or computer enemies
 - ctf
 
 ## resources
